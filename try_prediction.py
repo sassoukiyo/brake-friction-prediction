@@ -1,19 +1,15 @@
-"""
-Edit the 5 numbers below, save this file, then run it to see the model's prediction.
-"""
+
 
 import numpy as np
 from helpers import load_model
 
 model = load_model("XX_000.pkl")
 
-# <<< CHANGE THESE 5 NUMBERS >>>
 rotor_speed_rpm      = 100.0
 brake_pressure_bar   = 2.5
 normal_force_kN      = 80.0
 pad_temperature_C    = 90.0
 rotor_temperature_C  = 110.0
-# <<< ------------------------ >>>
 
 my_input = np.array([[
     rotor_speed_rpm,
