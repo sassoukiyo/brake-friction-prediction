@@ -5,7 +5,6 @@ from helpers import load_dataset
 
 X, y = load_dataset("data_students.txt")
 
-# Same model settings as train_random_forest.py
 model = RandomForestRegressor(
     n_estimators=50,
     min_samples_leaf=30,
@@ -13,7 +12,6 @@ model = RandomForestRegressor(
     random_state=42,
 )
 
-# 5-fold cross-validation: split data into 5 parts, rotate which part is "hidden"
 cv = KFold(n_splits=5, shuffle=True, random_state=42)
 
 print("Running 5-fold cross-validation (trains 5 separate models, ~1 min total)...")
